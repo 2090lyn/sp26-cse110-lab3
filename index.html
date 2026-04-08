@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lab 2</title>
+    <meta charset="UTF-8">
+<!-- Usually add: <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+    <header>
+        <h1>Team 17: CSE 110 Group Meeting</h1>
+        <p>Topic: CSE 110 Project Logistics</p>
+        <p>Date: Wednesday, April 8, 2026</p>
+        <p>Time: Meeting Time</p>
+        <p>Location: Zoom</p>
+        
+        <nav>
+            <a href="#attendance">Attendance</a> |
+            <a href="#agenda">Agenda</a> |
+            <a href="#notes">Notes</a> |
+            <a href="#media">Media</a> |
+            <a href="#feedback">Feedback</a>
+        </nav>
+        <br>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- Attendance -->
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <table>
+                <tr>
+                    <th><strong>Last Name</strong></th>
+                    <th><strong>First Name</strong></th>
+                    <th><strong>Status</strong></th>
+                </tr>
+                <tr>
+                    <td>Goldberg</td>
+                    <td>Cathlyn</td>
+                    <td>Present</td>
+                </tr>
+                <tr>
+                    <td>Kalarickal</td>
+                    <td>Sanjana</td>
+                    <td>Present</td>
+                </tr>
+                <tr>
+                    <td>Del Rio</td>
+                    <td>Ivan</td>
+                    <td>Present</td>
+                </tr>
+                <tr>
+                    <td>Pham</td>
+                    <td>Andrew</td>
+                    <td>Absent</td>
+                </tr>
+                <tr>
+                    <td>Deverian</td>
+                    <td>Luke</td>
+                    <td>Absent</td>
+                </tr>
+                <tr>
+                    <td>Mehta</td>
+                    <td>Sohum</td>
+                    <td>Absent</td>
+                </tr>
+                <tr>
+                    <td>Lakhani</td>
+                    <td>Aayan</td>
+                    <td>Absent</td>
+                </tr>
+                <tr>
+                    <td>Ali</td>
+                    <td>Mohammed</td>
+                    <td>Absent</td>
+                </tr>
+                <tr>
+                    <td>Jimenez Chavez</td>
+                    <td>Paul</td>
+                    <td>Absent</td>
+                </tr>
+                <tr>
+                    <td>Chen</td>
+                    <td>Raymond</td>
+                    <td>Absent</td>
+                </tr>
+            </table>
+            <br>
+        </section>
+
+        <hr>
+
+        <!-- Agenda -->
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <ol>
+                <li>Discuss Project Idea</li>
+                <li>Assign Roles</li>
+                <li>Plan Next Steps</li>
+                <li>Schedule Next Meeting</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- Notes -->
+        <section id="notes">
+            <h2>Unfinished Business</h2>
+            <p><em>We previously discussed team bonding and potential initial roles.</em></p>
+
+            <h2>New Business</h2>
+            <p>The team <b>brainstormed</b> ideas and <i>discussed</i> possible features.</p>
+
+            <div>
+                <p><strong>Key Point:</strong> Focus on <span>user experience</span>.</p>
+            </div>
+
+            <h2>Comments / Questions / Concerns</h2>
+            <details>
+                <summary>View Discussion</summary>
+                <p>What technologies should we use for development?</p>
+            </details>
+        </section>
+
+        <hr>
+
+        <!-- Media -->
+        <section id="media">
+            <h2>Media</h2>
+
+            <picture>
+                <source srcset="screenshots/example.png" type="image/png">
+                <img src="screenshots/example.png" alt="Screenshot" width="300">
+            </picture>
+
+            <br><br>
+
+            <video width="480" height="360" controls>
+                <source src="screenshots/free99.mp4" type="video/mp4">
+            </video>
+
+            <br><br>
+
+            <audio controls>
+                <source src="screenshots/overworld.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <hr>
+
+        <!-- Form -->
+        <section id="feedback">
+            <h2>Feedback Form</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Meeting Feedback</legend>
+
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" list="names" required>
+
+                    <datalist id="names">
+                        <option value="Cathlyn Goldberg">
+                        <option value="Sanjana Kalarickal">
+                        <option value="Ivan Del Rio">
+                        <option value="Andrew Pham">
+                        <option value="Luke Deverian">
+                        <option value="Sohum Mehta">
+                        <option value="Aayan Lakhani">
+                        <option value="Mohammed Ali">
+                        <option value="Paul Jimenez Chavez">
+                        <option value="Raymond Chen">
+                    </datalist>
+                    <br><br>
+
+                    <label>Date:</label>
+                    <input type="date">
+                    <br><br>
+
+                    <label>Did you attend?</label>
+                    <input type="checkbox"> Yes
+                    <br><br>
+
+                    <label>Role:</label>
+                    <select>
+                        <option>Select Role</option>
+                        <option>Frontend</option>
+                        <option>Backend</option>
+                        <option>Designer</option>
+                        <option>Debugger</option>
+                        <option>Tester</option>
+                    </select><br><br>
+
+                    <label>Additional Comments:</label>
+                    <br>
+                    <textarea rows="4" cols="30"></textarea>
+                    <br><br>
+
+                    <button type="submit">Submit</button>
+
+                    <label for="browser-choice">Choose a browser:</label>
+<input list="browsers" id="browser-choice" name="browser">
+
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Team 17 Meeting Minutes - April 2026</p>
+    </footer>
+
+</body>
+</html>
