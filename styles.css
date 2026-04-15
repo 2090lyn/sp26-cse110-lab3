@@ -12,7 +12,7 @@ body {
     margin: 20px;
     padding: 20px;
     background-color: var(--bg-color, midnightblue);
-    color: color(srgb 1 1 1);
+    color: rgb(255, 255, 255);
 }
 
 main {
@@ -69,6 +69,10 @@ p {
     font-size: 1.2em; /* relative */
 }
 
+#agenda {
+    font-size: 1.75em;
+    text-align: center;
+}
 /* Header */
 header {
     line-height: 1.2;
@@ -91,14 +95,9 @@ header {
     border-radius: 5px;
 }
 
-header::after {
-    position: absolute;
-    content: "";
-}
-
 header p {
     margin: 0.2rem 0 0.2rem 1rem;
-    color: color(srgb 0.9 0.85 1);
+    color: rgb(230, 220, 255);
 
 }
 
@@ -148,10 +147,8 @@ section p {
     opacity: 0.9;
 }
 
-section {
-    & h2 {
-        text-decoration: underline;
-    }
+section h2 {
+    text-decoration: underline;
 }
 
 /* Tables */
@@ -279,7 +276,7 @@ footer {
     padding: 1rem;
     border-top: 1px solid white;
     margin-top: 2rem;
-    color: color(srgb 0.8 0.8 0.8);
+    color: rgb(204, 204, 204);
     font-style: italic;
     position: static;
     bottom: auto;
