@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lab 2</title>
+    <title>Lab 3</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="screenshots/favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +26,6 @@
         <br>
     </header>
 
-    <hr>
 
     <main>
 
@@ -92,7 +92,6 @@
             <br>
         </section>
 
-        <hr>
 
         <!-- Agenda -->
         <section id="agenda">
@@ -105,7 +104,6 @@
             </ol>
         </section>
 
-        <hr>
 
         <!-- Notes -->
         <section id="notes">
@@ -126,7 +124,6 @@
             </details>
         </section>
 
-        <hr>
 
         <!-- Media -->
         <section id="media">
@@ -149,8 +146,6 @@
                 <source src="screenshots/overworld.mp3" type="audio/mpeg">
             </audio>
         </section>
-
-        <hr>
 
         <!-- Form -->
         <section id="feedback">
@@ -177,8 +172,8 @@
                     </datalist>
                     <br><br>
 
-                    <label for="date">Date:</label>
-                    <input type="date" id="date">
+                    <label for="date" required>Date:</label>
+                    <input type="date" id="date" required>
                     <br><br>
 
                     <label for="attend">Did you attend?</label>
@@ -186,7 +181,7 @@
                     <br><br>
 
                     <label for="role">Role:</label>
-                    <select id="role">
+                    <select id="role" required>
                         <option>Select Role</option>
                         <option>Frontend</option>
                         <option>Backend</option>
@@ -197,14 +192,14 @@
 
                     <label for="comments">Additional Comments:</label>
                     <br>
-                    <textarea id="comments" rows="4" cols="30"></textarea>
+                    <textarea id="comments" rows="4" cols="30" required></textarea>
                     <br><br>
 
                     <button type="submit">Submit</button>
                 </fieldset>
             </form>
         </section>
-
+        </main>
     </main>
 
     <footer>
