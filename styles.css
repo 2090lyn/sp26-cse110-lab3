@@ -1,0 +1,286 @@
+:root {
+    --bg-color: color-mix(in srgb, rgb(25, 1, 50) 60%, black 40%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--bg-color, midnightblue);
+    color: color(srgb 1 1 1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "attendance attendance"
+        "agenda notes"
+        "media feedback";
+    gap: 1.5rem;
+}
+
+/* Map sections into grid */
+#attendance { grid-area: attendance; }
+#agenda { grid-area: agenda; }
+#notes { grid-area: notes; }
+#media { grid-area: media; }
+#feedback { grid-area: feedback; }
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "attendance"
+            "agenda"
+            "notes"
+            "media"
+            "feedback";
+    }
+}
+
+h1 {
+    font-size: 3vw; /* relative */
+}
+
+h2 {
+    color: #c77dff; /* hex */
+    font-size: 0.75cm; /* relative */
+    text-align: center;
+}
+
+/* Adjacent sibling */
+h2 + p {
+    margin-top: 0;
+}
+
+/* General sibling */
+h2 ~ p {
+    font-style: italic;
+}
+
+p {
+    color: hsl(260, 50%, 80%);
+    font-size: 1.2em; /* relative */
+}
+
+/* Header */
+header {
+    line-height: 1.2;
+    position: relative;
+    top: 0;
+
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    border-style: solid;
+    border-width: 3pt;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+header::after {
+    position: absolute;
+    content: "";
+}
+
+header p {
+    margin: 0.2rem 0 0.2rem 1rem;
+    color: color(srgb 0.9 0.85 1);
+
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+}
+nav a {
+    text-decoration: none;
+    color: lightskyblue;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+nav a:hover {
+    background-color: midnightblue;
+    color: white;
+}
+nav a:active {
+    background-color: lightskyblue;
+    color: midnightblue;
+}
+
+/* Sections */
+section {
+    margin: 1rem 0 1.5rem 0;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Descendant */
+section p {
+    opacity: 0.9;
+}
+
+section {
+    & h2 {
+        text-decoration: underline;
+    }
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.present {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.absent {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+td.absent {
+    text-transform: uppercase;
+}
+
+/* Media */
+#media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+#media img,
+#media video {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+fieldset {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+fieldset > * {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+fieldset > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+input, select, textarea {
+    padding: 1rem;
+    border-radius: 6px;
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type="date"] {
+    border: 2px solid purple;
+}
+
+input[type="text"], input[type="date"], textarea, #role {
+    background-color: hsl(323, 67%, 92%);
+}
+
+/* Button */
+button {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.5vh;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+form:has(:invalid) button {
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+form:not(:has(:invalid)) button {
+    box-shadow: 0 0 12px #c77dff, 0 0 25px rgba(199, 125, 255, 0.6);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid white;
+    margin-top: 2rem;
+    color: color(srgb 0.8 0.8 0.8);
+    font-style: italic;
+    position: static;
+    bottom: auto;
+}
