@@ -1,5 +1,6 @@
 :root {
     --bg-color: color-mix(in srgb, rgb(25, 1, 50) 60%, black 40%);
+    --accent-color: #c77dff;
 }
 
 * {
@@ -147,8 +148,14 @@ section p {
     opacity: 0.9;
 }
 
-section h2 {
-    text-decoration: underline;
+/* NESTED SELECTORS */
+section {
+    background: rgba(255, 255, 255, 0.05);
+    & h2 {
+        color: var(--accent-color);
+        text-align: center;
+        text-decoration: underline;
+    }
 }
 
 /* Tables */
