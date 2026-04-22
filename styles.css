@@ -1,6 +1,7 @@
 :root {
     --bg-color: color-mix(in srgb, rgb(25, 1, 50) 60%, black 40%);
     --accent-color: #c77dff;
+    --vibrant-purple: color(display-p3 0.8 0.2 1);
 }
 
 * {
@@ -92,7 +93,7 @@ header {
 
     border-style: solid;
     border-width: 3pt;
-    border: 2px solid white;
+    border-color: white;
     border-radius: 5px;
 }
 
@@ -260,6 +261,7 @@ button {
     font-weight: bold;
     font-size: 1.5vh;
     transition: all 0.3s ease;
+    min-width: 120px;
 }
 
 button:hover {
